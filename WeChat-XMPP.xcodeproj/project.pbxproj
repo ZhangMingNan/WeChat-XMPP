@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4C054EA51BD37F8A0047555C /* MNEmotionKeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C054EA41BD37F8A0047555C /* MNEmotionKeyBoard.swift */; settings = {ASSET_TAGS = (); }; };
+		4C054EA71BD3D72C0047555C /* SharemoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C054EA61BD3D72C0047555C /* SharemoreView.swift */; settings = {ASSET_TAGS = (); }; };
+		4C054EA91BD3D74A0047555C /* SharemoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C054EA81BD3D74A0047555C /* SharemoreView.xib */; settings = {ASSET_TAGS = (); }; };
 		4C84C7B61BCF38E2007031F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C84C7B51BCF38E2007031F9 /* AppDelegate.swift */; };
 		4C84C7B81BCF38E2007031F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C84C7B71BCF38E2007031F9 /* ViewController.swift */; };
 		4C84C7BB1BCF38E2007031F9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C84C7B91BCF38E2007031F9 /* Login.storyboard */; };
@@ -33,6 +36,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4C054EA41BD37F8A0047555C /* MNEmotionKeyBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNEmotionKeyBoard.swift; sourceTree = "<group>"; };
+		4C054EA61BD3D72C0047555C /* SharemoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharemoreView.swift; sourceTree = "<group>"; };
+		4C054EA81BD3D74A0047555C /* SharemoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SharemoreView.xib; sourceTree = "<group>"; };
 		4C84C7B21BCF38E2007031F9 /* WeChat-XMPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeChat-XMPP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C84C7B51BCF38E2007031F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		4C84C7B71BCF38E2007031F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
@@ -192,9 +198,12 @@
 		4CEFABAA1BD12D4800963F39 /* Roster */ = {
 			isa = PBXGroup;
 			children = (
+				4C054EA41BD37F8A0047555C /* MNEmotionKeyBoard.swift */,
 				4CEC91481BD1F7A5006CCBF2 /* MessageCell.swift */,
 				4CE2EF871BD1535E00A19911 /* ToolsView.swift */,
 				4CE2EF891BD1537D00A19911 /* ToolsView.xib */,
+				4C054EA61BD3D72C0047555C /* SharemoreView.swift */,
+				4C054EA81BD3D74A0047555C /* SharemoreView.xib */,
 			);
 			name = Roster;
 			sourceTree = "<group>";
@@ -273,6 +282,7 @@
 				4C84C7BD1BCF38E2007031F9 /* Assets.xcassets in Resources */,
 				4C84C7C81BCF38FD007031F9 /* Podfile in Resources */,
 				4C84C7BB1BCF38E2007031F9 /* Login.storyboard in Resources */,
+				4C054EA91BD3D74A0047555C /* SharemoreView.xib in Resources */,
 				4CE2EF8A1BD1537D00A19911 /* ToolsView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -335,7 +345,9 @@
 				4C84C7B81BCF38E2007031F9 /* ViewController.swift in Sources */,
 				4C84C7B61BCF38E2007031F9 /* AppDelegate.swift in Sources */,
 				4C84C7DF1BCF4091007031F9 /* UIViewExtensions.swift in Sources */,
+				4C054EA71BD3D72C0047555C /* SharemoreView.swift in Sources */,
 				4C84C7DE1BCF4091007031F9 /* UIImageExtensions.swift in Sources */,
+				4C054EA51BD37F8A0047555C /* MNEmotionKeyBoard.swift in Sources */,
 				4C84C7E51BCF573B007031F9 /* IMClient.swift in Sources */,
 				4C84C7DC1BCF4091007031F9 /* StringExtensions.swift in Sources */,
 				4C84C7E11BCF4DDD007031F9 /* MNAccount.swift in Sources */,

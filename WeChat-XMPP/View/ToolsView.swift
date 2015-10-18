@@ -18,6 +18,7 @@ public class ToolsView: UIView ,UITextFieldDelegate{
     @IBOutlet weak var emotionButton: UIButton!
 
     var sendMessageBlock:((text:String)->Void)?
+    var addButtonClickedBlock:(()->Void)?
     class func toolsView()->ToolsView {
         let toolsView = NSBundle.mainBundle().loadNibNamed("ToolsView", owner: nil, options: nil).first as! ToolsView
         let image = UIImage.resizableImageWithName("Connectkeyboad_banner_bg")
@@ -26,7 +27,7 @@ public class ToolsView: UIView ,UITextFieldDelegate{
         toolsView.context.background   = UIImage.resizableImageWithName("SendTextViewBkg")
         toolsView.context.leftView = UIView(frame: CGRectMake(0, 0, 10, 10))
         toolsView.context.leftViewMode = UITextFieldViewMode.Always
-
+        
         toolsView.typeButton.setBackgroundImage(UIImage(named: "ToolViewKeyboard"), forState: UIControlState.Normal)
         toolsView.typeButton.setBackgroundImage(UIImage(named: "ToolViewKeyboardHL"), forState: UIControlState.Highlighted)
 
@@ -36,7 +37,11 @@ public class ToolsView: UIView ,UITextFieldDelegate{
         toolsView.otherButton.setBackgroundImage(UIImage(named: "ToolViewInputVoice"), forState: UIControlState.Normal)
         toolsView.otherButton.setBackgroundImage(UIImage(named: "ToolViewInputVoiceHL"), forState: UIControlState.Highlighted)
         toolsView.context.delegate = toolsView
+        toolsView.otherButton.addTarget(toolsView, action: "addButtonClicked", forControlEvents: UIControlEvents.TouchUpInside)
         return toolsView
+    }
+    func addButtonClicked(){
+        self.addButtonClickedBlock?()
     }
     public func textFieldShouldReturn(textField: UITextField) -> Bool {
         sendMessageBlock?(text: self.context.text!)

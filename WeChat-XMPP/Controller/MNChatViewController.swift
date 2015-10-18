@@ -26,6 +26,20 @@ class MNChatViewController: UIViewController,NSFetchedResultsControllerDelegate 
 
         self.toolsView = ToolsView.toolsView()
         self.toolsView.frame = CGRectMake(0, CGRectGetMaxY(self.tableView.frame), screenWidth, 44)
+
+        self.toolsView.addButtonClickedBlock = {
+            () -> Void in
+            let v = SharemoreView.sharemoreView()
+            print(v.frame)
+           self.toolsView.context.resignFirstResponder()
+
+            //弹出后将光标设置为透明
+            self.toolsView.context.inputView = v
+            //self.toolsView.context.enabled = false
+
+            self.toolsView.context.becomeFirstResponder()
+        }
+
         self.toolsView.sendMessageBlock = {
             (text) -> Void in
             self.view.endEditing(true)
@@ -54,9 +68,8 @@ class MNChatViewController: UIViewController,NSFetchedResultsControllerDelegate 
     }
     let tabFooter = UIView()
     func keyBoardChange(notify:NSNotification){
-        print(self.tableView.size().height , self.tableView.contentSize.height)
-
-
+            //弹出后将光标设置为透明
+            self.toolsView.context.inputView = nil
             //输入框跟随键盘抬起
             var dic = notify.userInfo!
             let endFrame = dic[UIKeyboardFrameEndUserInfoKey]!.CGRectValue

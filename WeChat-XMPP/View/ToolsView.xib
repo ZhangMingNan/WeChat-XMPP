@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="59i-ma-5uF" customClass="ToolsView" customModule="WeChat_XMPP" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ss2-9f-2AQ">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="2R0-FK-usU"/>
+                    </constraints>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tyf-Oy-Bq9">
+                    <rect key="frame" x="8" y="4" width="35" height="35"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="cWg-fN-2Fd"/>
+                        <constraint firstAttribute="width" constant="35" id="ljF-4r-OSC"/>
+                    </constraints>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jqv-bn-CzF">
+                    <rect key="frame" x="285" y="4" width="35" height="35"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="ecg-sg-f83"/>
+                        <constraint firstAttribute="height" constant="35" id="pyg-cq-dQM"/>
+                    </constraints>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gpi-dW-EMk">
+                    <rect key="frame" x="242" y="4" width="35" height="35"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="35" id="WSG-BM-3gR"/>
+                        <constraint firstAttribute="height" constant="35" id="bIm-eI-kyd"/>
+                    </constraints>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mLs-Kv-4qh">
+                    <rect key="frame" x="51" y="2" width="183" height="40"/>
+                    <animations/>
+                    <constraints>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="Es8-3u-XrT"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="Jqv-bn-CzF" firstAttribute="leading" secondItem="Gpi-dW-EMk" secondAttribute="trailing" constant="8" id="7vQ-q1-4Bv"/>
+                <constraint firstAttribute="bottom" secondItem="tyf-Oy-Bq9" secondAttribute="bottom" constant="5" id="9nF-H7-lSY"/>
+                <constraint firstAttribute="bottom" secondItem="Ss2-9f-2AQ" secondAttribute="bottom" id="Dce-iP-1Fs"/>
+                <constraint firstItem="Gpi-dW-EMk" firstAttribute="leading" secondItem="mLs-Kv-4qh" secondAttribute="trailing" constant="8" id="E0W-MS-n5V"/>
+                <constraint firstItem="Jqv-bn-CzF" firstAttribute="top" secondItem="59i-ma-5uF" secondAttribute="top" constant="4" id="J8U-dM-I3t"/>
+                <constraint firstItem="tyf-Oy-Bq9" firstAttribute="leading" secondItem="59i-ma-5uF" secondAttribute="leading" constant="8" id="K4J-PW-6Mw"/>
+                <constraint firstAttribute="bottom" secondItem="Jqv-bn-CzF" secondAttribute="bottom" constant="5" id="QrT-H0-uGh"/>
+                <constraint firstItem="Ss2-9f-2AQ" firstAttribute="leading" secondItem="59i-ma-5uF" secondAttribute="leading" id="TBx-96-VfD"/>
+                <constraint firstItem="Gpi-dW-EMk" firstAttribute="leading" secondItem="mLs-Kv-4qh" secondAttribute="trailing" constant="8" id="Vi8-FI-xrK"/>
+                <constraint firstItem="Jqv-bn-CzF" firstAttribute="leading" secondItem="Gpi-dW-EMk" secondAttribute="trailing" constant="8" id="Vpt-5p-Pcj"/>
+                <constraint firstItem="Gpi-dW-EMk" firstAttribute="top" secondItem="59i-ma-5uF" secondAttribute="top" constant="4" id="XwR-sX-3HO"/>
+                <constraint firstItem="Ss2-9f-2AQ" firstAttribute="top" secondItem="59i-ma-5uF" secondAttribute="top" id="bSs-5X-E0O"/>
+                <constraint firstAttribute="bottom" secondItem="mLs-Kv-4qh" secondAttribute="bottom" constant="2" id="dxK-aV-uv0"/>
+                <constraint firstItem="Gpi-dW-EMk" firstAttribute="leading" secondItem="mLs-Kv-4qh" secondAttribute="trailing" constant="8" id="geJ-gL-HxS"/>
+                <constraint firstItem="tyf-Oy-Bq9" firstAttribute="top" secondItem="59i-ma-5uF" secondAttribute="top" constant="4" id="gvg-t3-pM0"/>
+                <constraint firstAttribute="bottom" secondItem="Gpi-dW-EMk" secondAttribute="bottom" constant="5" id="hi5-IZ-dy1"/>
+                <constraint firstAttribute="trailing" secondItem="Ss2-9f-2AQ" secondAttribute="trailing" id="snj-vE-zU9"/>
+                <constraint firstItem="mLs-Kv-4qh" firstAttribute="leading" secondItem="tyf-Oy-Bq9" secondAttribute="trailing" constant="8" id="tV1-9b-SsA"/>
+                <constraint firstAttribute="trailing" secondItem="Jqv-bn-CzF" secondAttribute="trailing" id="yuA-mA-DRa"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="bgImageView" destination="Ss2-9f-2AQ" id="j7q-nT-O4A"/>
+                <outlet property="context" destination="mLs-Kv-4qh" id="G1S-Kz-yRD"/>
+                <outlet property="emotionButton" destination="Gpi-dW-EMk" id="jo6-7o-7hT"/>
+                <outlet property="otherButton" destination="Jqv-bn-CzF" id="WE2-he-C1n"/>
+                <outlet property="typeButton" destination="tyf-Oy-Bq9" id="D6C-Z0-jGJ"/>
+            </connections>
+            <point key="canvasLocation" x="57" y="103"/>
+        </view>
+    </objects>
+</document>

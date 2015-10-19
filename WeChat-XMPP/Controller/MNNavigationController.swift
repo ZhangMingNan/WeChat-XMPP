@@ -16,17 +16,17 @@ class MNNavigationController: UINavigationController {
 
         let bar = UINavigationBar.appearance()
         bar.setBackgroundImage(UIImage(named: "bottomTipsIcon_bg"), forBarMetrics: UIBarMetrics.Default)
-
+        bar.tintColor = UIColor.whiteColor()
         let barTextAttrs = [NSForegroundColorAttributeName:UIColor.whiteColor(),NSFontAttributeName:UIFont.systemFontOfSize(20)]
         bar.titleTextAttributes = barTextAttrs
 
         let item = UIBarButtonItem.appearance()
+
         let disableTextAttrs = [NSForegroundColorAttributeName:UIColor.whiteColor(),NSFontAttributeName:UIFont.systemFontOfSize(14)]
         item.setTitleTextAttributes(disableTextAttrs, forState: UIControlState.Disabled)
 
         let itemTextAttrs = [NSForegroundColorAttributeName:UIColor.whiteColor(),NSFontAttributeName:UIFont.systemFontOfSize(14)]
         item.setTitleTextAttributes(itemTextAttrs, forState: UIControlState.Normal)
-
     }
 
     override func didReceiveMemoryWarning() {

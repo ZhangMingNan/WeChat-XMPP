@@ -1,0 +1,6 @@
+framework module UpYunSDK {
+  umbrella header "UpYunSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

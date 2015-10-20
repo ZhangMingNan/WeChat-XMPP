@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4C054EA51BD37F8A0047555C /* MNEmotionKeyBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C054EA41BD37F8A0047555C /* MNEmotionKeyBoard.swift */; settings = {ASSET_TAGS = (); }; };
 		4C054EA71BD3D72C0047555C /* SharemoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C054EA61BD3D72C0047555C /* SharemoreView.swift */; settings = {ASSET_TAGS = (); }; };
 		4C054EA91BD3D74A0047555C /* SharemoreView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4C054EA81BD3D74A0047555C /* SharemoreView.xib */; settings = {ASSET_TAGS = (); }; };
+		4C054EAB1BD4DF500047555C /* MNChatViewController+ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C054EAA1BD4DF500047555C /* MNChatViewController+ImagePicker.swift */; settings = {ASSET_TAGS = (); }; };
+		4C054EAF1BD5DBDE0047555C /* NOTE in Resources */ = {isa = PBXBuildFile; fileRef = 4C054EAE1BD5DBDE0047555C /* NOTE */; settings = {ASSET_TAGS = (); }; };
+		4C054EB11BD5DCC50047555C /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C054EB01BD5DCC50047555C /* ImageCell.swift */; settings = {ASSET_TAGS = (); }; };
+		4C054EB31BD5E22B0047555C /* ImageMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C054EB21BD5E22B0047555C /* ImageMessage.swift */; settings = {ASSET_TAGS = (); }; };
+		4C054EB51BD5E30C0047555C /* ImageMessageFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C054EB41BD5E30C0047555C /* ImageMessageFrame.swift */; settings = {ASSET_TAGS = (); }; };
+		4C054EB71BD626A30047555C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C054EB61BD626A30047555C /* Message.swift */; settings = {ASSET_TAGS = (); }; };
+		4C054EB91BD62C9A0047555C /* MessageFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C054EB81BD62C9A0047555C /* MessageFrame.swift */; settings = {ASSET_TAGS = (); }; };
 		4C84C7B61BCF38E2007031F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C84C7B51BCF38E2007031F9 /* AppDelegate.swift */; };
 		4C84C7B81BCF38E2007031F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C84C7B71BCF38E2007031F9 /* ViewController.swift */; };
 		4C84C7BB1BCF38E2007031F9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C84C7B91BCF38E2007031F9 /* Login.storyboard */; };
@@ -27,8 +33,8 @@
 		4CE2EF851BD151A600A19911 /* MNChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2EF831BD151A600A19911 /* MNChatViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		4CE2EF881BD1535E00A19911 /* ToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2EF871BD1535E00A19911 /* ToolsView.swift */; settings = {ASSET_TAGS = (); }; };
 		4CE2EF8A1BD1537D00A19911 /* ToolsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE2EF891BD1537D00A19911 /* ToolsView.xib */; settings = {ASSET_TAGS = (); }; };
-		4CEC91451BD1F703006CCBF2 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC91441BD1F703006CCBF2 /* Message.swift */; settings = {ASSET_TAGS = (); }; };
-		4CEC91471BD1F71D006CCBF2 /* MessageFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC91461BD1F71D006CCBF2 /* MessageFrame.swift */; settings = {ASSET_TAGS = (); }; };
+		4CEC91451BD1F703006CCBF2 /* TextMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC91441BD1F703006CCBF2 /* TextMessage.swift */; settings = {ASSET_TAGS = (); }; };
+		4CEC91471BD1F71D006CCBF2 /* TextMessageFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC91461BD1F71D006CCBF2 /* TextMessageFrame.swift */; settings = {ASSET_TAGS = (); }; };
 		4CEC91491BD1F7A5006CCBF2 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEC91481BD1F7A5006CCBF2 /* MessageCell.swift */; settings = {ASSET_TAGS = (); }; };
 		4CEFAB561BCFEF6D00963F39 /* RosterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFAB551BCFEF6D00963F39 /* RosterViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		4CEFABAC1BD1352B00963F39 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CEFABAB1BD1352B00963F39 /* ChatViewController.swift */; settings = {ASSET_TAGS = (); }; };
@@ -36,9 +42,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		4C054EA41BD37F8A0047555C /* MNEmotionKeyBoard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNEmotionKeyBoard.swift; sourceTree = "<group>"; };
 		4C054EA61BD3D72C0047555C /* SharemoreView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SharemoreView.swift; sourceTree = "<group>"; };
 		4C054EA81BD3D74A0047555C /* SharemoreView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SharemoreView.xib; sourceTree = "<group>"; };
+		4C054EAA1BD4DF500047555C /* MNChatViewController+ImagePicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "MNChatViewController+ImagePicker.swift"; sourceTree = "<group>"; };
+		4C054EAE1BD5DBDE0047555C /* NOTE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = NOTE; sourceTree = "<group>"; };
+		4C054EB01BD5DCC50047555C /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		4C054EB21BD5E22B0047555C /* ImageMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMessage.swift; sourceTree = "<group>"; };
+		4C054EB41BD5E30C0047555C /* ImageMessageFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMessageFrame.swift; sourceTree = "<group>"; };
+		4C054EB61BD626A30047555C /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		4C054EB81BD62C9A0047555C /* MessageFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageFrame.swift; sourceTree = "<group>"; };
 		4C84C7B21BCF38E2007031F9 /* WeChat-XMPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeChat-XMPP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C84C7B51BCF38E2007031F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		4C84C7B71BCF38E2007031F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
@@ -56,10 +68,10 @@
 		4C84C7E21BCF54AE007031F9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4C84C7E41BCF573B007031F9 /* IMClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMClient.swift; sourceTree = "<group>"; };
 		4CE2EF831BD151A600A19911 /* MNChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MNChatViewController.swift; path = Controller/MNChatViewController.swift; sourceTree = "<group>"; };
-		4CE2EF871BD1535E00A19911 /* ToolsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToolsView.swift; sourceTree = "<group>"; };
+		4CE2EF871BD1535E00A19911 /* ToolsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToolsView.swift; path = View/ToolsView.swift; sourceTree = "<group>"; };
 		4CE2EF891BD1537D00A19911 /* ToolsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToolsView.xib; sourceTree = "<group>"; };
-		4CEC91441BD1F703006CCBF2 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
-		4CEC91461BD1F71D006CCBF2 /* MessageFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageFrame.swift; sourceTree = "<group>"; };
+		4CEC91441BD1F703006CCBF2 /* TextMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextMessage.swift; sourceTree = "<group>"; };
+		4CEC91461BD1F71D006CCBF2 /* TextMessageFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextMessageFrame.swift; sourceTree = "<group>"; };
 		4CEC91481BD1F7A5006CCBF2 /* MessageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		4CEFAB551BCFEF6D00963F39 /* RosterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = RosterViewController.swift; path = Controller/RosterViewController.swift; sourceTree = "<group>"; };
 		4CEFAB571BCFF02F00963F39 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
@@ -120,7 +132,9 @@
 				4C84C7CD1BCF3CDC007031F9 /* Other */,
 				4C84C7CF1BCF3CDC007031F9 /* View */,
 				4C84C7BC1BCF38E2007031F9 /* Assets.xcassets */,
+				4CE2EF871BD1535E00A19911 /* ToolsView.swift */,
 				4C84C7C11BCF38E2007031F9 /* Info.plist */,
+				4C054EAE1BD5DBDE0047555C /* NOTE */,
 			);
 			path = "WeChat-XMPP";
 			sourceTree = "<group>";
@@ -181,6 +195,7 @@
 				4CEFAB551BCFEF6D00963F39 /* RosterViewController.swift */,
 				4CEFABAB1BD1352B00963F39 /* ChatViewController.swift */,
 				4CE2EF831BD151A600A19911 /* MNChatViewController.swift */,
+				4C054EAA1BD4DF500047555C /* MNChatViewController+ImagePicker.swift */,
 			);
 			name = Roster;
 			path = ..;
@@ -189,8 +204,12 @@
 		4CEFABA91BD12D3B00963F39 /* Roster */ = {
 			isa = PBXGroup;
 			children = (
-				4CEC91461BD1F71D006CCBF2 /* MessageFrame.swift */,
-				4CEC91441BD1F703006CCBF2 /* Message.swift */,
+				4CEC91461BD1F71D006CCBF2 /* TextMessageFrame.swift */,
+				4CEC91441BD1F703006CCBF2 /* TextMessage.swift */,
+				4C054EB21BD5E22B0047555C /* ImageMessage.swift */,
+				4C054EB41BD5E30C0047555C /* ImageMessageFrame.swift */,
+				4C054EB61BD626A30047555C /* Message.swift */,
+				4C054EB81BD62C9A0047555C /* MessageFrame.swift */,
 			);
 			name = Roster;
 			sourceTree = "<group>";
@@ -198,12 +217,11 @@
 		4CEFABAA1BD12D4800963F39 /* Roster */ = {
 			isa = PBXGroup;
 			children = (
-				4C054EA41BD37F8A0047555C /* MNEmotionKeyBoard.swift */,
 				4CEC91481BD1F7A5006CCBF2 /* MessageCell.swift */,
-				4CE2EF871BD1535E00A19911 /* ToolsView.swift */,
 				4CE2EF891BD1537D00A19911 /* ToolsView.xib */,
 				4C054EA61BD3D72C0047555C /* SharemoreView.swift */,
 				4C054EA81BD3D74A0047555C /* SharemoreView.xib */,
+				4C054EB01BD5DCC50047555C /* ImageCell.swift */,
 			);
 			name = Roster;
 			sourceTree = "<group>";
@@ -281,6 +299,7 @@
 			files = (
 				4C84C7BD1BCF38E2007031F9 /* Assets.xcassets in Resources */,
 				4C84C7C81BCF38FD007031F9 /* Podfile in Resources */,
+				4C054EAF1BD5DBDE0047555C /* NOTE in Resources */,
 				4C84C7BB1BCF38E2007031F9 /* Login.storyboard in Resources */,
 				4C054EA91BD3D74A0047555C /* SharemoreView.xib in Resources */,
 				4CE2EF8A1BD1537D00A19911 /* ToolsView.xib in Resources */,
@@ -347,19 +366,24 @@
 				4C84C7DF1BCF4091007031F9 /* UIViewExtensions.swift in Sources */,
 				4C054EA71BD3D72C0047555C /* SharemoreView.swift in Sources */,
 				4C84C7DE1BCF4091007031F9 /* UIImageExtensions.swift in Sources */,
-				4C054EA51BD37F8A0047555C /* MNEmotionKeyBoard.swift in Sources */,
 				4C84C7E51BCF573B007031F9 /* IMClient.swift in Sources */,
+				4C054EB31BD5E22B0047555C /* ImageMessage.swift in Sources */,
 				4C84C7DC1BCF4091007031F9 /* StringExtensions.swift in Sources */,
 				4C84C7E11BCF4DDD007031F9 /* MNAccount.swift in Sources */,
 				4C84C7D61BCF4040007031F9 /* MNTabBarController.swift in Sources */,
-				4CEC91471BD1F71D006CCBF2 /* MessageFrame.swift in Sources */,
+				4CEC91471BD1F71D006CCBF2 /* TextMessageFrame.swift in Sources */,
 				4C84C7DD1BCF4091007031F9 /* UIBarButtonItemExtensions.swift in Sources */,
+				4C054EB51BD5E30C0047555C /* ImageMessageFrame.swift in Sources */,
 				4CE2EF881BD1535E00A19911 /* ToolsView.swift in Sources */,
+				4C054EB11BD5DCC50047555C /* ImageCell.swift in Sources */,
 				4CEFABAC1BD1352B00963F39 /* ChatViewController.swift in Sources */,
 				4C84C7E31BCF54AE007031F9 /* LoginViewController.swift in Sources */,
+				4C054EB91BD62C9A0047555C /* MessageFrame.swift in Sources */,
 				4C84C7D51BCF4040007031F9 /* MNNavigationController.swift in Sources */,
-				4CEC91451BD1F703006CCBF2 /* Message.swift in Sources */,
+				4CEC91451BD1F703006CCBF2 /* TextMessage.swift in Sources */,
+				4C054EAB1BD4DF500047555C /* MNChatViewController+ImagePicker.swift in Sources */,
 				4CEFAB561BCFEF6D00963F39 /* RosterViewController.swift in Sources */,
+				4C054EB71BD626A30047555C /* Message.swift in Sources */,
 				4CE2EF851BD151A600A19911 /* MNChatViewController.swift in Sources */,
 				4CEC91491BD1F7A5006CCBF2 /* MessageCell.swift in Sources */,
 			);

@@ -8,7 +8,9 @@
 
 import UIKit
 import XMPPFramework
-class MNChatViewController: UIViewController,NSFetchedResultsControllerDelegate ,UITableViewDelegate,UITableViewDataSource {
+import hpple
+import SwiftyJSON
+class MNChatViewController: UIViewController,NSFetchedResultsControllerDelegate ,UITableViewDelegate,UITableViewDataSource ,SharemoreViewDelegate{
 
     var tableView: UITableView!
     var friendJid:XMPPJID?
@@ -16,11 +18,13 @@ class MNChatViewController: UIViewController,NSFetchedResultsControllerDelegate 
     var resultsController:NSFetchedResultsController?
     var toolsView:ToolsView!
     var messageFrames = [MessageFrame]()
+    var sharemoreView:SharemoreView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.sharemoreView = SharemoreView.sharemoreView()
+        self.sharemoreView.delegate = self
         self.tableView = UITableView(frame: CGRectMake(0, 0,screenWidth, screenHeight - 44))
-
         self.tableView.delegate = self
         self.tableView.dataSource = self
 
@@ -29,12 +33,10 @@ class MNChatViewController: UIViewController,NSFetchedResultsControllerDelegate 
 
         self.toolsView.addButtonClickedBlock = {
             () -> Void in
-            let v = SharemoreView.sharemoreView()
-            print(v.frame)
-           self.toolsView.context.resignFirstResponder()
 
+            self.toolsView.context.resignFirstResponder()
             //弹出后将光标设置为透明
-            self.toolsView.context.inputView = v
+            self.toolsView.context.inputView = self.sharemoreView
             //self.toolsView.context.enabled = false
 
             self.toolsView.context.becomeFirstResponder()
@@ -42,11 +44,10 @@ class MNChatViewController: UIViewController,NSFetchedResultsControllerDelegate 
 
         self.toolsView.sendMessageBlock = {
             (text) -> Void in
-            self.view.endEditing(true)
+
             let message = XMPPMessage(type: "chat", to: self.friendJid)
             message.addBody(text)
             IMClient.shared.stream?.sendElement(message)
-            print(text)
         }
 
         self.view.addSubview(self.tableView)
@@ -66,6 +67,16 @@ class MNChatViewController: UIViewController,NSFetchedResultsControllerDelegate 
         
         self.navigationItem.title = self.vCardTemp?.nickname
     }
+
+    //点击附件选择器调用
+    func click() {
+        let imagepc = UIImagePickerController()
+        imagepc.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        imagepc.delegate = self
+        self.presentViewController(imagepc, animated: true, completion: nil)
+    }
+
+
     let tabFooter = UIView()
     func keyBoardChange(notify:NSNotification){
             //弹出后将光标设置为透明
@@ -76,21 +87,22 @@ class MNChatViewController: UIViewController,NSFetchedResultsControllerDelegate 
             let keyBoardY = endFrame.origin.y
             let endDuration = dic[UIKeyboardAnimationDurationUserInfoKey] as! Double
 
-            UIView.animateWithDuration(endDuration, animations: { () -> Void in
-                self.toolsView.transform = CGAffineTransformMakeTranslation(0,keyBoardY - self.view.frame.size.height)
-                print(keyBoardY - self.view.frame.size.height)
-            })
-            tabFooter.frame = CGRectMake(0, 0, 0, abs(keyBoardY-self.view.frame.size.height))
-            self.tableView.tableFooterView = tabFooter
-            let currentOffset = self.tableView.contentOffset
 
-            //判断是否需要移动
+            let currentOffset = self.tableView.contentOffset
+            UIView.animateWithDuration(endDuration, animations: { () -> Void in
+            self.toolsView.transform = CGAffineTransformMakeTranslation(0,keyBoardY - self.view.frame.size.height)
+
+            })
+            //判断是否需要移动 tableview
             if self.tableView.size().height < self.tableView.contentSize.height {
                 self.tableView.contentOffset = CGPointMake(currentOffset.x, currentOffset.y + abs(keyBoardY-self.view.frame.size.height))
+
             }
-            toBottom()
 
+        tabFooter.frame = CGRectMake(0, 0, 0, abs(keyBoardY-self.view.frame.size.height))
+        self.tableView.tableFooterView = tabFooter
 
+        toBottom()
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -129,56 +141,71 @@ class MNChatViewController: UIViewController,NSFetchedResultsControllerDelegate 
     func controller(controller: NSFetchedResultsController, didChangeObject anObject: AnyObject, atIndexPath indexPath: NSIndexPath?, forChangeType type: NSFetchedResultsChangeType, newIndexPath: NSIndexPath?) {
         let obj = anObject as! XMPPMessageArchiving_Message_CoreDataObject
 
-        if !obj.isComposing {
-            //将数据库中的数据转换成
-            print("没有添加之前\(self.messageFrames.count)")
-          //  for mess in (self.resultsController?.fetchedObjects as! [XMPPMessageArchiving_Message_CoreDataObject]){
-            //    if !mess.isComposing {
-                    var model = Message()
-                    model.text = obj.body ?? ""
-                    model.type = obj.outgoing.integerValue
-                    if model.type == 1 {
-                        //发送消息
-                        model.icon =  IMClient.shared.vCard?.myvCardTemp.photo ?? NSData(contentsOfFile: "icon_avatar")
-                        model.name = IMClient.shared.vCard?.myvCardTemp.nickname
-                    }else {
-                        model.icon = self.vCardTemp?.photo ?? NSData(contentsOfFile: "icon_avatar")
-                        model.name = self.vCardTemp?.nickname
-                    }
+        let doc = TFHpple(data: obj.messageStr.dataUsingEncoding(NSUTF8StringEncoding), isXML: true)
+        let imageInfoJsonStr = doc.searchWithXPathQuery("/message/@imageInfo").last as? String
 
-                    let frame = MessageFrame()
-                    frame.message = model
-                    self.messageFrames.append(frame)
-                //}
-            //}
-            print((self.resultsController?.fetchedObjects as! [XMPPMessageArchiving_Message_CoreDataObject]).count)
-            print(self.messageFrames.count)
-            print(newIndexPath)
-            self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: self.messageFrames.count - 1 , inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
-            //滚动到底部
-            toBottom()
+        if !obj.isComposing {
+            if let str = imageInfoJsonStr {
+
+                let infoJson =   JSON(data: str.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!)
+                var imageFr = ImageMessageFrame()
+                var imageModel = ImageMessage()
+                imageModel.height = CGFloat(infoJson["height"].floatValue)
+                imageModel.weight = CGFloat(infoJson["weight"].floatValue)
+                imageModel.url = baseUrl +  infoJson["url"].stringValue
+                imageModel.icon = self.vCardTemp?.photo ?? NSData(contentsOfFile: "icon_avatar")
+                imageFr.imageMessage = imageModel
+                self.messageFrames.append(imageFr)
+                self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: self.messageFrames.count - 1 , inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
+            }else {
+                //将数据库中的数据转换成
+                var frame = TextMessageFrame()
+                var model = TextMessage()
+                model.text = obj.body ?? ""
+                model.type = obj.outgoing.integerValue
+                if model.type == 1 {
+                    //发送消息
+                    model.icon =  IMClient.shared.vCard?.myvCardTemp.photo ?? NSData(contentsOfFile: "icon_avatar")
+                    model.name = IMClient.shared.vCard?.myvCardTemp.nickname
+                }else {
+                    model.icon = self.vCardTemp?.photo ?? NSData(contentsOfFile: "icon_avatar")
+                    model.name = self.vCardTemp?.nickname
+                }
+
+                frame.message = model
+                self.messageFrames.append(frame)
+                self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: self.messageFrames.count - 1 , inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
+                //滚动到底部
+            }
+
         }
 
     }
 
     func  toBottom(){
             if self.tableView.contentSize.height > self.tableView.size().height {
+                print(self.tableView.size().height)
             self.tableView.setContentOffset(CGPointMake(0, self.tableView.contentSize.height - self.tableView.size().height), animated: true)
-    }
+        }
     }
 
     func controllerDidChangeContent(controller: NSFetchedResultsController) {
        // self.tableView.endUpdates()
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-
-        let cell = MessageCell.cell(tableView)
-        cell.messFrame = self.messageFrames[indexPath.row]
-        return cell
+        if self.messageFrames[indexPath.row] is TextMessageFrame {
+           let  cell = MessageCell.cell(tableView)
+            cell.messFrame = self.messageFrames[indexPath.row] as? TextMessageFrame
+            return cell
+        }else if self.messageFrames[indexPath.row] is ImageMessageFrame {
+            let  cell = ImageCell.cell(tableView)
+            cell.imageMessageFrame = self.messageFrames[indexPath.row] as? ImageMessageFrame
+            return cell
+        }
+        return UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "defcell")
     }
-
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return self.messageFrames[indexPath.row].cellHeight
+       return self.messageFrames[indexPath.row].cellHeight
     }
     func scrollViewWillBeginDragging(scrollView: UIScrollView) {
         self.view.endEditing(true)

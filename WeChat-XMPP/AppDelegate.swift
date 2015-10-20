@@ -7,7 +7,6 @@
 //
 
 import UIKit
-
 let app = UIApplication.sharedApplication()
 
 let screenWidth = UIScreen.mainScreen().bounds.width
@@ -36,6 +35,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
 
 
+
+      //  var xmpp = DDXMLDocument(XMLString: "", options: 0)
 
         return true
     }

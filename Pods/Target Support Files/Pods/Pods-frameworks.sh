@@ -52,6 +52,7 @@ code_sign_if_enabled() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework 'Pods/AFNetworking.framework'
   install_framework 'Pods/Alamofire.framework'
   install_framework 'Pods/CocoaAsyncSocket.framework'
   install_framework 'Pods/CocoaLumberjack.framework'
@@ -61,9 +62,12 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework 'Pods/MJExtension.framework'
   install_framework 'Pods/MJRefresh.framework'
   install_framework 'Pods/SwiftyJSON.framework'
+  install_framework 'Pods/UpYunSDK.framework'
   install_framework 'Pods/XMPPFramework.framework'
+  install_framework 'Pods/hpple.framework'
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework 'Pods/AFNetworking.framework'
   install_framework 'Pods/Alamofire.framework'
   install_framework 'Pods/CocoaAsyncSocket.framework'
   install_framework 'Pods/CocoaLumberjack.framework'
@@ -73,5 +77,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework 'Pods/MJExtension.framework'
   install_framework 'Pods/MJRefresh.framework'
   install_framework 'Pods/SwiftyJSON.framework'
+  install_framework 'Pods/UpYunSDK.framework'
   install_framework 'Pods/XMPPFramework.framework'
+  install_framework 'Pods/hpple.framework'
 fi

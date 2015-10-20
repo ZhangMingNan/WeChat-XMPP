@@ -13,7 +13,6 @@ class MNNavigationController: UINavigationController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         let bar = UINavigationBar.appearance()
         bar.setBackgroundImage(UIImage(named: "bottomTipsIcon_bg"), forBarMetrics: UIBarMetrics.Default)
         bar.tintColor = UIColor.whiteColor()

@@ -12,19 +12,15 @@ class MessageCell: UITableViewCell {
     var iconView:UIImageView = UIImageView()
     var nameView:UILabel  = UILabel()
     var textView:UIButton = UIButton()
-    var messFrame:MessageFrame {
-        get {
-            return self.messFrame
-        }
-        set {
-            self.iconView.frame = newValue.icon!
-            //self.nameView.frame = newValue.name!
-            //self.nameView.text = newValue.message.name!
-            self.textView.frame = newValue.text!
-            self.textView.setTitle(newValue.message.text!, forState: UIControlState.Normal)
-            self.iconView.image = UIImage(data: newValue.message.icon!)
+    var messFrame:TextMessageFrame? {
+        didSet{
+            self.iconView.frame = messFrame!.icon!
+
+            self.textView.frame = messFrame!.text!
+            self.textView.setTitle(messFrame!.message!.text!, forState: UIControlState.Normal)
+            self.iconView.image = UIImage(data: messFrame!.message!.icon!)
             
-            if newValue.messageBean?.type == 1 {
+            if messFrame!.message?.type == 1 {
                 self.textView.setBackgroundImage(UIImage.resizableImageWithName("SenderTextNodeBkg"), forState: UIControlState.Normal)
             }else {
 

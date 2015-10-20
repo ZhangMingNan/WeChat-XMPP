@@ -10,42 +10,144 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="150"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcD-kb-XFX">
-                    <rect key="frame" x="30" y="8" width="59" height="59"/>
+                <view tag="11" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2cn-Y1-K4o">
+                    <rect key="frame" x="8" y="0.0" width="59" height="79"/>
+                    <subviews>
+                        <button opaque="NO" tag="11" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hcD-kb-XFX">
+                            <rect key="frame" x="0.0" y="0.0" width="59" height="59"/>
+                            <animations/>
+                            <state key="normal" image="sharemore_pic" backgroundImage="sharemore_other"/>
+                            <connections>
+                                <action selector="clickedButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="PEH-2b-YcU"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="相册" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X8I-q6-F4o">
+                            <rect key="frame" x="0.0" y="57" width="59" height="21"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <animations/>
-                    <state key="normal" image="sharemore_pic" backgroundImage="sharemore_other"/>
-                </button>
-                <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C0k-PP-WKQ">
-                    <rect key="frame" x="97" y="8" width="59" height="59"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view tag="12" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GpP-Bu-9an">
+                    <rect key="frame" x="75" y="0.0" width="59" height="79"/>
+                    <subviews>
+                        <button opaque="NO" tag="12" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKI-Xw-CWF">
+                            <rect key="frame" x="0.0" y="0.0" width="59" height="59"/>
+                            <animations/>
+                            <state key="normal" image="sharemore_video" backgroundImage="sharemore_other"/>
+                            <connections>
+                                <action selector="clickedButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="GNn-IE-Lds"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="拍摄" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="06a-A5-0jx">
+                            <rect key="frame" x="0.0" y="57" width="59" height="21"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <animations/>
-                    <state key="normal" image="sharemore_video" backgroundImage="sharemore_other"/>
-                </button>
-                <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D7f-yr-aDh">
-                    <rect key="frame" x="164" y="8" width="59" height="59"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view tag="13" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Xz4-Zb-J50">
+                    <rect key="frame" x="142" y="0.0" width="59" height="79"/>
+                    <subviews>
+                        <button opaque="NO" tag="13" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oF5-Uv-KbO">
+                            <rect key="frame" x="0.0" y="0.0" width="59" height="59"/>
+                            <animations/>
+                            <state key="normal" image="sharemore_sight" backgroundImage="sharemore_other"/>
+                            <connections>
+                                <action selector="clickedButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="Odu-uw-bu4"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="小视频" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DhS-Dd-UVu">
+                            <rect key="frame" x="0.0" y="57" width="59" height="21"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <animations/>
-                    <state key="normal" image="sharemore_sight" backgroundImage="sharemore_other"/>
-                </button>
-                <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r9T-AW-hk8">
-                    <rect key="frame" x="231" y="8" width="59" height="59"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view tag="14" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qP6-nN-SmY">
+                    <rect key="frame" x="209" y="0.0" width="59" height="79"/>
+                    <subviews>
+                        <button opaque="NO" tag="14" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m79-RW-Du5">
+                            <rect key="frame" x="0.0" y="0.0" width="59" height="59"/>
+                            <animations/>
+                            <state key="normal" image="sharemore_videovoip" backgroundImage="sharemore_other"/>
+                            <connections>
+                                <action selector="clickedButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="jws-HI-aUo"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="录像" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1UQ-7D-gjA">
+                            <rect key="frame" x="0.0" y="57" width="59" height="21"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <animations/>
-                    <state key="normal" image="sharemore_videovoip" backgroundImage="sharemore_other"/>
-                </button>
-                <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0xp-Fq-OTC">
-                    <rect key="frame" x="30" y="82" width="59" height="59"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view tag="15" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LcO-WD-GJb">
+                    <rect key="frame" x="8" y="81" width="59" height="79"/>
+                    <subviews>
+                        <button opaque="NO" tag="15" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jru-AJ-Aqa">
+                            <rect key="frame" x="0.0" y="0.0" width="59" height="59"/>
+                            <animations/>
+                            <state key="normal" image="sharemore_location" backgroundImage="sharemore_other"/>
+                            <connections>
+                                <action selector="clickedButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="VNg-Fw-GLm"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="位置" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gz7-Y0-h1u">
+                            <rect key="frame" x="0.0" y="57" width="59" height="21"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <animations/>
-                    <state key="normal" image="sharemore_location" backgroundImage="sharemore_other"/>
-                </button>
-                <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8in-pQ-6i1">
-                    <rect key="frame" x="97" y="82" width="59" height="59"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
+                <view tag="16" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ig3-dT-ZTS">
+                    <rect key="frame" x="75" y="81" width="59" height="79"/>
+                    <subviews>
+                        <button opaque="NO" tag="16" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHN-bF-Js7">
+                            <rect key="frame" x="0.0" y="0.0" width="59" height="59"/>
+                            <animations/>
+                            <state key="normal" image="sharemore_friendcard" backgroundImage="sharemore_other"/>
+                            <connections>
+                                <action selector="clickedButton:" destination="iN0-l3-epB" eventType="touchUpInside" id="8ih-bm-MW6"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="名片" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pw4-VT-hb5">
+                            <rect key="frame" x="0.0" y="57" width="59" height="21"/>
+                            <animations/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
                     <animations/>
-                    <state key="normal" image="sharemore_friendcard" backgroundImage="sharemore_other"/>
-                </button>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <animations/>
             <color key="backgroundColor" red="0.94509803921568625" green="0.94509803921568625" blue="0.95686274509803915" alpha="1" colorSpace="calibratedRGB"/>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="341" y="34.5"/>
+            <point key="canvasLocation" x="393" y="13"/>
         </view>
     </objects>
     <resources>

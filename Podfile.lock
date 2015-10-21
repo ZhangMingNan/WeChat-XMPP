@@ -22,6 +22,7 @@ PODS:
     - AFNetworking/NSURLSession
   - Alamofire (3.0.1)
   - Bugly (1.4.0)
+  - BuglyExtension (1.1)
   - CocoaAsyncSocket (7.4.2)
   - CocoaLumberjack (1.9.2):
     - CocoaLumberjack/Extensions (= 1.9.2)
@@ -188,6 +189,7 @@ PODS:
 DEPENDENCIES:
   - Alamofire
   - Bugly (~> 1.4.0)
+  - BuglyExtension (~> 1.1)
   - FMDB (~> 2.5)
   - hpple (~> 0.2.0)
   - Kingfisher (~> 1.6)
@@ -203,6 +205,7 @@ SPEC CHECKSUMS:
   AFNetworking: 8e4e60500beb8bec644cf575beee72990a76d399
   Alamofire: 2457e1b2e6c46bb05c3a598c542b7bfd08893775
   Bugly: 682e56dcc62633635e22d75d0968fa5a372bfce3
+  BuglyExtension: 857435d3f1545404cbce9a777e4ce5b7123cf36c
   CocoaAsyncSocket: f5783bdedd232d91b89769bc4b5a1580aed518ad
   CocoaLumberjack: 628fca2e88ef06f7cf6817309aa405f325d9a6fa
   FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52

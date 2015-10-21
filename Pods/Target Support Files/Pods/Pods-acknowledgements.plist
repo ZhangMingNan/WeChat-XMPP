@@ -77,6 +77,15 @@ THE SOFTWARE.
 		</dict>
 		<dict>
 			<key>FooterText</key>
+			<string>Copyright 2015 tencent.com. All rights reserved.
+</string>
+			<key>Title</key>
+			<string>BuglyExtension</string>
+			<key>Type</key>
+			<string>PSGroupSpecifier</string>
+		</dict>
+		<dict>
+			<key>FooterText</key>
 			<string>Public Domain License
 
 The CocoaAsyncSocket project is in the public domain.

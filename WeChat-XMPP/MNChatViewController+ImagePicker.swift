@@ -28,17 +28,14 @@ extension MNChatViewController:UINavigationControllerDelegate,UIImagePickerContr
             let imageHeight =  CGFloat((arr["image-height"] as! NSNumber).floatValue)
             let imagewidth =  CGFloat((arr["image-width"] as! NSNumber).floatValue)
 
-            print(imageUrl)
             let message =  XMPPMessage(type: "chat", to: self.friendJid)
             let imgInfo = ["url": imageUrl, "height": imageHeight, "width": imagewidth]
             do{
                  let jsonData =  try NSJSONSerialization.dataWithJSONObject(imgInfo, options:NSJSONWritingOptions.init(rawValue: 0))
                 let json = String(data: jsonData, encoding: NSUTF8StringEncoding)
                 message.addAttributeWithName("imageInfo", stringValue: json!)
-                message.addBody(">>BODY")
+                message.addBody("")
                 IMClient.shared.stream?.sendElement(message)
-                print(imageUrl)
-
             }catch{
                 print("解析失败")
             }

@@ -52,6 +52,11 @@ THE SOFTWARE.
 Copyright 2015 tencent.com. All rights reserved.
 
 
+## BuglyExtension
+
+Copyright 2015 tencent.com. All rights reserved.
+
+
 ## CocoaAsyncSocket
 
 Public Domain License

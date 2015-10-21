@@ -158,7 +158,7 @@ class MNChatViewController: UIViewController,NSFetchedResultsControllerDelegate 
                     imageModel.icon = self.vCardTemp?.photo ?? NSData(contentsOfFile: "icon_avatar")
                 }
                 imageModel.height = CGFloat(infoJson["height"].floatValue)
-                imageModel.weight = CGFloat(infoJson["weight"].floatValue)
+                imageModel.width = CGFloat(infoJson["width"].floatValue)
                 imageModel.url = baseUrl +  infoJson["url"].stringValue
                 imageFr.imageMessage = imageModel
                 self.messageFrames.append(imageFr)

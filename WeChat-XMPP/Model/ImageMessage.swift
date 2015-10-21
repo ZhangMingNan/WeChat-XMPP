@@ -19,11 +19,12 @@ class ImageMessage :Message{
 
     //照片的原始大小
     var height:CGFloat = 0
-    var weight:CGFloat = 0
+    var width:CGFloat = 0
 
     var orientation:OrentationType {
         get{
-            return height > weight ? .Vertical : .Horizontal
+
+            return height > width ? .Vertical : .Horizontal
         }
     }
 }

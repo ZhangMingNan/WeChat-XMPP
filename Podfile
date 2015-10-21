@@ -12,4 +12,5 @@ pod 'MJExtension', '~> 2.5.12'
 pod 'FMDB', '~> 2.5'
 pod 'UpYunSDK', '~> 2.0.1'
 pod 'hpple', '~> 0.2.0'
+pod 'Bugly', '~> 1.4.0'
 pod 'Reveal-iOS-SDK', :configurations => ['Debug']

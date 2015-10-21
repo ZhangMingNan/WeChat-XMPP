@@ -22,13 +22,20 @@ class ImageMessageFrame:MessageFrame {
                 //设置发送图片的位置
                 if message.type == 1 {
                     //垂直显示图片
-                    if message.orientation == .Vertical {
-                        image = CGRectMake(screenWidth - padding * 2 - iconW - picWidth,padding,picWidth,picHeight)
+                    if imageMessage?.height > picHeight || imageMessage?.width > picWidth {
+                        if message.orientation == .Vertical {
+                            image = CGRectMake(screenWidth - padding * 2 - iconW - picWidth,padding,picWidth,picHeight)
+                        }else {
+                            //水平显示图片
+                            image = CGRectMake(screenWidth - padding * 2 - iconW - picHeight,padding,picHeight,picWidth)
+                        }
                     }else {
-                        //水平显示图片
-                        image = CGRectMake(screenWidth - padding * 2 - iconW - picHeight,padding,picHeight,picWidth)
+                        print(imageMessage!.height)
+                            image = CGRectMake(screenWidth - padding * 2 - iconW - imageMessage!.width,padding,imageMessage!.width,imageMessage!.height)
                     }
+
                 } else {
+                                        if imageMessage?.height > picHeight || imageMessage?.width > picWidth {
                     //
                     //垂直显示图片
                     if message.orientation == .Vertical {
@@ -36,6 +43,10 @@ class ImageMessageFrame:MessageFrame {
                     }else {
                     //水平显示图片
                         image = CGRectMake(CGRectGetMaxX(self.icon!) + padding,padding,picHeight,picWidth)
+                    }
+                    }else {
+                        image = CGRectMake(CGRectGetMaxX(self.icon!) + padding,padding,imageMessage!.width,imageMessage!.height)
+
                     }
                 }
             cellHeight = CGRectGetMaxY(self.image!)

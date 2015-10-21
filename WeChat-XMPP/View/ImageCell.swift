@@ -14,7 +14,6 @@ class ImageCell: UITableViewCell {
     var iconView:UIImageView!
     var imageMessageFrame:ImageMessageFrame?{
         didSet{
-            print(NSStringFromCGRect((imageMessageFrame?.icon!)!))
             if let imgFrame = imageMessageFrame {
                 self.imageMessageView.frame = imgFrame.image!
                 self.imageMessageView.image =
@@ -26,13 +25,11 @@ class ImageCell: UITableViewCell {
 
         }
     }
-
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
-
     class func cell(tableView:UITableView)->ImageCell{
         let id = "imageMessageId"
         var cell = tableView.dequeueReusableCellWithIdentifier(id) as? ImageCell
@@ -50,6 +47,8 @@ class ImageCell: UITableViewCell {
         self.contentView.addSubview(self.imageMessageView)
         self.contentView.addSubview(self.iconView)
         self.backgroundColor = UIColor.clearColor()
+        self.imageMessageView.layer.cornerRadius = 6
+        self.imageMessageView.layer.masksToBounds = true
     }
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")

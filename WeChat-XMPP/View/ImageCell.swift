@@ -14,11 +14,12 @@ class ImageCell: UITableViewCell {
     var iconView:UIImageView!
     var imageMessageFrame:ImageMessageFrame?{
         didSet{
-
+            print(NSStringFromCGRect((imageMessageFrame?.icon!)!))
             if let imgFrame = imageMessageFrame {
                 self.imageMessageView.frame = imgFrame.image!
-                self.imageMessageView.kf_setImageWithURL(NSURL(string:imgFrame.imageMessage!.url!)!)
-                self.iconView.frame = imgFrame.image!
+                self.imageMessageView.image =
+                    UIImage(data: NSData(contentsOfURL: NSURL(string:imgFrame.imageMessage!.url!)!)!)
+                self.iconView.frame = imgFrame.icon!
                 self.iconView.image  = UIImage(data: imgFrame.imageMessage!.icon!)
 
             }
@@ -46,6 +47,8 @@ class ImageCell: UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         self.imageMessageView = UIImageView()
         self.iconView = UIImageView()
+        self.contentView.addSubview(self.imageMessageView)
+        self.contentView.addSubview(self.iconView)
         self.backgroundColor = UIColor.clearColor()
     }
     required init?(coder aDecoder: NSCoder) {

@@ -38,6 +38,7 @@ class ImageMessageFrame:MessageFrame {
                         image = CGRectMake(CGRectGetMaxX(self.icon!) + padding,padding,picHeight,picWidth)
                     }
                 }
+            cellHeight = CGRectGetMaxY(self.image!)
             }
         }
     }

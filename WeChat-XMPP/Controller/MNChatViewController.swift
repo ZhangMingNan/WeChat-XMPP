@@ -142,7 +142,7 @@ class MNChatViewController: UIViewController,NSFetchedResultsControllerDelegate 
         let obj = anObject as! XMPPMessageArchiving_Message_CoreDataObject
 
         let doc = TFHpple(data: obj.messageStr.dataUsingEncoding(NSUTF8StringEncoding), isXML: true)
-        let imageInfoJsonStr = doc.searchWithXPathQuery("/message/@imageInfo").last as? String
+        let imageInfoJsonStr = (doc.searchWithXPathQuery("/message/@imageInfo").last as? TFHppleElement)?.text()
 
         if !obj.isComposing {
             if let str = imageInfoJsonStr {
@@ -150,10 +150,16 @@ class MNChatViewController: UIViewController,NSFetchedResultsControllerDelegate 
                 let infoJson =   JSON(data: str.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!)
                 var imageFr = ImageMessageFrame()
                 var imageModel = ImageMessage()
+                imageModel.type = obj.outgoing.integerValue
+                if imageModel.type == 1 {
+                    //发送消息
+                    imageModel.icon =  IMClient.shared.vCard?.myvCardTemp.photo ?? NSData(contentsOfFile: "icon_avatar")
+                }else {
+                    imageModel.icon = self.vCardTemp?.photo ?? NSData(contentsOfFile: "icon_avatar")
+                }
                 imageModel.height = CGFloat(infoJson["height"].floatValue)
                 imageModel.weight = CGFloat(infoJson["weight"].floatValue)
                 imageModel.url = baseUrl +  infoJson["url"].stringValue
-                imageModel.icon = self.vCardTemp?.photo ?? NSData(contentsOfFile: "icon_avatar")
                 imageFr.imageMessage = imageModel
                 self.messageFrames.append(imageFr)
                 self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: self.messageFrames.count - 1 , inSection: 0)], withRowAnimation: UITableViewRowAnimation.None)
@@ -194,15 +200,16 @@ class MNChatViewController: UIViewController,NSFetchedResultsControllerDelegate 
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         if self.messageFrames[indexPath.row] is TextMessageFrame {
+            print("text")
            let  cell = MessageCell.cell(tableView)
             cell.messFrame = self.messageFrames[indexPath.row] as? TextMessageFrame
             return cell
-        }else if self.messageFrames[indexPath.row] is ImageMessageFrame {
+        }else{
+            print("img")
             let  cell = ImageCell.cell(tableView)
             cell.imageMessageFrame = self.messageFrames[indexPath.row] as? ImageMessageFrame
             return cell
         }
-        return UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: "defcell")
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
        return self.messageFrames[indexPath.row].cellHeight

@@ -14,14 +14,13 @@ let app = UIApplication.sharedApplication()
 let screenWidth = UIScreen.mainScreen().bounds.width
 let screenHeight = UIScreen.mainScreen().bounds.height
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-       // CrashReporter.sharedInstance().installWithAppId("900001491")
+        // CrashReporter.sharedInstance().installWithAppId("900001491")
         self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
 
         if MNAccount.shared.isLogin {

@@ -13,8 +13,6 @@ import XMPPFramework
 
 let baseUrl = "http://wechat-xmpp.b0.upaiyun.com/"
 
-
-
 extension MNChatViewController:UINavigationControllerDelegate,UIImagePickerControllerDelegate{
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
     self.dismissViewControllerAnimated(true) { () -> Void in
@@ -34,7 +32,7 @@ extension MNChatViewController:UINavigationControllerDelegate,UIImagePickerContr
                  let jsonData =  try NSJSONSerialization.dataWithJSONObject(imgInfo, options:NSJSONWritingOptions.init(rawValue: 0))
                 let json = String(data: jsonData, encoding: NSUTF8StringEncoding)
                 message.addAttributeWithName("imageInfo", stringValue: json!)
-                message.addBody("")
+                message.addBody(">")
                 IMClient.shared.stream?.sendElement(message)
             }catch{
                 print("解析失败")

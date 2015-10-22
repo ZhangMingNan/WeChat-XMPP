@@ -16,8 +16,10 @@
 		4C054EB51BD5E30C0047555C /* ImageMessageFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C054EB41BD5E30C0047555C /* ImageMessageFrame.swift */; settings = {ASSET_TAGS = (); }; };
 		4C054EB71BD626A30047555C /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C054EB61BD626A30047555C /* Message.swift */; settings = {ASSET_TAGS = (); }; };
 		4C054EB91BD62C9A0047555C /* MessageFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C054EB81BD62C9A0047555C /* MessageFrame.swift */; settings = {ASSET_TAGS = (); }; };
+		4C11070F1BD90A4300B039B4 /* Contacts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11070D1BD90A4300B039B4 /* Contacts.swift */; settings = {ASSET_TAGS = (); }; };
+		4C1107101BD90A4300B039B4 /* ContactsFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C11070E1BD90A4300B039B4 /* ContactsFrame.swift */; settings = {ASSET_TAGS = (); }; };
 		4C84C7B61BCF38E2007031F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C84C7B51BCF38E2007031F9 /* AppDelegate.swift */; };
-		4C84C7B81BCF38E2007031F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C84C7B71BCF38E2007031F9 /* ViewController.swift */; };
+		4C84C7B81BCF38E2007031F9 /* MessageLoggingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C84C7B71BCF38E2007031F9 /* MessageLoggingController.swift */; };
 		4C84C7BB1BCF38E2007031F9 /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C84C7B91BCF38E2007031F9 /* Login.storyboard */; };
 		4C84C7BD1BCF38E2007031F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C84C7BC1BCF38E2007031F9 /* Assets.xcassets */; };
 		4C84C7C81BCF38FD007031F9 /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 4C84C7C71BCF38FD007031F9 /* Podfile */; settings = {ASSET_TAGS = (); }; };
@@ -30,6 +32,9 @@
 		4C84C7E11BCF4DDD007031F9 /* MNAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C84C7E01BCF4DDD007031F9 /* MNAccount.swift */; settings = {ASSET_TAGS = (); }; };
 		4C84C7E31BCF54AE007031F9 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C84C7E21BCF54AE007031F9 /* LoginViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		4C84C7E51BCF573B007031F9 /* IMClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C84C7E41BCF573B007031F9 /* IMClient.swift */; settings = {ASSET_TAGS = (); }; };
+		4CE29BD61BD8AC7500978A36 /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE29BD51BD8AC7500978A36 /* FriendCell.swift */; settings = {ASSET_TAGS = (); }; };
+		4CE29BD81BD8B75F00978A36 /* Friend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE29BD71BD8B75F00978A36 /* Friend.swift */; settings = {ASSET_TAGS = (); }; };
+		4CE29BDA1BD8B76F00978A36 /* FriendFrame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE29BD91BD8B76F00978A36 /* FriendFrame.swift */; settings = {ASSET_TAGS = (); }; };
 		4CE2EF851BD151A600A19911 /* MNChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2EF831BD151A600A19911 /* MNChatViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		4CE2EF881BD1535E00A19911 /* ToolsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CE2EF871BD1535E00A19911 /* ToolsView.swift */; settings = {ASSET_TAGS = (); }; };
 		4CE2EF8A1BD1537D00A19911 /* ToolsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4CE2EF891BD1537D00A19911 /* ToolsView.xib */; settings = {ASSET_TAGS = (); }; };
@@ -51,9 +56,11 @@
 		4C054EB41BD5E30C0047555C /* ImageMessageFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageMessageFrame.swift; sourceTree = "<group>"; };
 		4C054EB61BD626A30047555C /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		4C054EB81BD62C9A0047555C /* MessageFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageFrame.swift; sourceTree = "<group>"; };
+		4C11070D1BD90A4300B039B4 /* Contacts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Contacts.swift; sourceTree = "<group>"; };
+		4C11070E1BD90A4300B039B4 /* ContactsFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsFrame.swift; sourceTree = "<group>"; };
 		4C84C7B21BCF38E2007031F9 /* WeChat-XMPP.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "WeChat-XMPP.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C84C7B51BCF38E2007031F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
-		4C84C7B71BCF38E2007031F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = ../ViewController.swift; sourceTree = "<group>"; };
+		4C84C7B71BCF38E2007031F9 /* MessageLoggingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MessageLoggingController.swift; path = ../MessageLoggingController.swift; sourceTree = "<group>"; };
 		4C84C7BA1BCF38E2007031F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Login.storyboard; sourceTree = "<group>"; };
 		4C84C7BC1BCF38E2007031F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C84C7C11BCF38E2007031F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -67,6 +74,9 @@
 		4C84C7E01BCF4DDD007031F9 /* MNAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MNAccount.swift; sourceTree = "<group>"; };
 		4C84C7E21BCF54AE007031F9 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		4C84C7E41BCF573B007031F9 /* IMClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMClient.swift; sourceTree = "<group>"; };
+		4CE29BD51BD8AC7500978A36 /* FriendCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		4CE29BD71BD8B75F00978A36 /* Friend.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Friend.swift; sourceTree = "<group>"; };
+		4CE29BD91BD8B76F00978A36 /* FriendFrame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FriendFrame.swift; sourceTree = "<group>"; };
 		4CE2EF831BD151A600A19911 /* MNChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MNChatViewController.swift; path = Controller/MNChatViewController.swift; sourceTree = "<group>"; };
 		4CE2EF871BD1535E00A19911 /* ToolsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ToolsView.swift; path = View/ToolsView.swift; sourceTree = "<group>"; };
 		4CE2EF891BD1537D00A19911 /* ToolsView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ToolsView.xib; sourceTree = "<group>"; };
@@ -145,7 +155,7 @@
 				4CEFABA81BD12D1800963F39 /* Roster */,
 				4C84C7D31BCF4040007031F9 /* MNNavigationController.swift */,
 				4C84C7D41BCF4040007031F9 /* MNTabBarController.swift */,
-				4C84C7B71BCF38E2007031F9 /* ViewController.swift */,
+				4C84C7B71BCF38E2007031F9 /* MessageLoggingController.swift */,
 				4C84C7E21BCF54AE007031F9 /* LoginViewController.swift */,
 			);
 			path = Controller;
@@ -204,6 +214,10 @@
 		4CEFABA91BD12D3B00963F39 /* Roster */ = {
 			isa = PBXGroup;
 			children = (
+				4C11070D1BD90A4300B039B4 /* Contacts.swift */,
+				4C11070E1BD90A4300B039B4 /* ContactsFrame.swift */,
+				4CE29BD71BD8B75F00978A36 /* Friend.swift */,
+				4CE29BD91BD8B76F00978A36 /* FriendFrame.swift */,
 				4CEC91461BD1F71D006CCBF2 /* TextMessageFrame.swift */,
 				4CEC91441BD1F703006CCBF2 /* TextMessage.swift */,
 				4C054EB21BD5E22B0047555C /* ImageMessage.swift */,
@@ -222,6 +236,7 @@
 				4C054EA61BD3D72C0047555C /* SharemoreView.swift */,
 				4C054EA81BD3D74A0047555C /* SharemoreView.xib */,
 				4C054EB01BD5DCC50047555C /* ImageCell.swift */,
+				4CE29BD51BD8AC7500978A36 /* FriendCell.swift */,
 			);
 			name = Roster;
 			sourceTree = "<group>";
@@ -361,7 +376,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C84C7B81BCF38E2007031F9 /* ViewController.swift in Sources */,
+				4C84C7B81BCF38E2007031F9 /* MessageLoggingController.swift in Sources */,
 				4C84C7B61BCF38E2007031F9 /* AppDelegate.swift in Sources */,
 				4C84C7DF1BCF4091007031F9 /* UIViewExtensions.swift in Sources */,
 				4C054EA71BD3D72C0047555C /* SharemoreView.swift in Sources */,
@@ -372,16 +387,21 @@
 				4C84C7E11BCF4DDD007031F9 /* MNAccount.swift in Sources */,
 				4C84C7D61BCF4040007031F9 /* MNTabBarController.swift in Sources */,
 				4CEC91471BD1F71D006CCBF2 /* TextMessageFrame.swift in Sources */,
+				4CE29BD61BD8AC7500978A36 /* FriendCell.swift in Sources */,
 				4C84C7DD1BCF4091007031F9 /* UIBarButtonItemExtensions.swift in Sources */,
 				4C054EB51BD5E30C0047555C /* ImageMessageFrame.swift in Sources */,
 				4CE2EF881BD1535E00A19911 /* ToolsView.swift in Sources */,
+				4CE29BDA1BD8B76F00978A36 /* FriendFrame.swift in Sources */,
+				4CE29BD81BD8B75F00978A36 /* Friend.swift in Sources */,
 				4C054EB11BD5DCC50047555C /* ImageCell.swift in Sources */,
+				4C1107101BD90A4300B039B4 /* ContactsFrame.swift in Sources */,
 				4CEFABAC1BD1352B00963F39 /* ChatViewController.swift in Sources */,
 				4C84C7E31BCF54AE007031F9 /* LoginViewController.swift in Sources */,
 				4C054EB91BD62C9A0047555C /* MessageFrame.swift in Sources */,
 				4C84C7D51BCF4040007031F9 /* MNNavigationController.swift in Sources */,
 				4CEC91451BD1F703006CCBF2 /* TextMessage.swift in Sources */,
 				4C054EAB1BD4DF500047555C /* MNChatViewController+ImagePicker.swift in Sources */,
+				4C11070F1BD90A4300B039B4 /* Contacts.swift in Sources */,
 				4CEFAB561BCFEF6D00963F39 /* RosterViewController.swift in Sources */,
 				4C054EB71BD626A30047555C /* Message.swift in Sources */,
 				4CE2EF851BD151A600A19911 /* MNChatViewController.swift in Sources */,
@@ -493,6 +513,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "WeChat-XMPP/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "zhangmingnan.WeChat-XMPP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -506,6 +527,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				INFOPLIST_FILE = "WeChat-XMPP/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "zhangmingnan.WeChat-XMPP";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

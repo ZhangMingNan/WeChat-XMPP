@@ -7,13 +7,13 @@
 //
 
 import UIKit
-import Bugly
+//import Bugly
 import XMPPFramework
 import hpple
 import SwiftyJSON
 
 class MNChatViewController: UIViewController,NSFetchedResultsControllerDelegate ,UITableViewDelegate,UITableViewDataSource ,SharemoreViewDelegate{
-
+    
     var tableView: UITableView!
     var friendJid:XMPPJID?
     var vCardTemp:XMPPvCardTemp?
@@ -144,11 +144,10 @@ class MNChatViewController: UIViewController,NSFetchedResultsControllerDelegate 
         let obj = anObject as! XMPPMessageArchiving_Message_CoreDataObject
 
         let doc = TFHpple(data: obj.messageStr.dataUsingEncoding(NSUTF8StringEncoding), isXML: true)
-
         let imageInfoJsonStr = (doc.peekAtSearchWithXPathQuery("/message/@imageInfo"))?.text()
+        print("imageInfoJsonStr:\(imageInfoJsonStr)")
         if !obj.isComposing {
             if let str = imageInfoJsonStr {
-
                 let infoJson =   JSON(data: str.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!)
                 var imageFr = ImageMessageFrame()
                 var imageModel = ImageMessage()

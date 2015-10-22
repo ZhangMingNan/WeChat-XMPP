@@ -70,7 +70,7 @@ class RosterViewController: UITableViewController ,NSFetchedResultsControllerDel
 
       let user =   (self.resultsController?.fetchedObjects as! [XMPPUserCoreDataStorageObject])[indexPath.row]
         cell.textLabel?.text = user.displayName
-        cell.detailTextLabel?.text = user.sectionNum.stringValue
+        //cell.detailTextLabel?.text = user.sectionNum.stringValue
         //获取头像数据
         if let photo = user.photo {
             cell.imageView?.image = photo

@@ -14,4 +14,12 @@ extension String {
             attributes: [ NSFontAttributeName : font ],
             context: nil).size
     }
+    func size(font:UIFont,maxWidth:CGFloat)->CGSize {
+        let maxSize = CGSizeMake(maxWidth, CGFloat.max)
+        return   self.boundingRectWithSize(
+            maxSize,
+            options: NSStringDrawingOptions.UsesLineFragmentOrigin,
+            attributes: [ NSFontAttributeName : font ],
+            context: nil).size
+    }
 }

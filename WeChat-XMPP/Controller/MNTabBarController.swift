@@ -16,16 +16,16 @@ class MNTabBarController: UITabBarController {
 
     override func viewWillAppear(animated: Bool) {
 
-        let mainframe = ViewController()
+        let mainframe = MessageLoggingController()
         settingController(mainframe, title: "微信", imageName: "tabbar_mainframe")
 
         let contacts = RosterViewController()
         settingController(contacts, title: "通讯录", imageName: "tabbar_contacts")
 
-        let discover = ViewController()
+        let discover = MessageLoggingController()
         settingController(discover, title: "发现", imageName: "tabbar_discover")
 
-        let me = ViewController()
+        let me = MessageLoggingController()
         settingController(me, title: "我", imageName: "tabbar_me")
 
         self.addChildViewController(MNNavigationController(rootViewController: mainframe))

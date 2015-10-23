@@ -8,6 +8,15 @@
 
 import UIKit
 
-class ContactsFrame: NSObject {
+class ContactsFrame {
 
+    var iconView:CGRect = CGRectZero
+    var nameLabel:CGRect = CGRectZero
+    var cellHeight:CGFloat = 0
+    var contacts:Contacts?{
+        didSet{
+            self.iconView = CGRectMake(10, 10, 45, 45)
+            self.nameLabel = CGRectMake(CGRectGetMaxX(self.iconView) + 10, 10, 100, 15)
+        }
+    }
 }

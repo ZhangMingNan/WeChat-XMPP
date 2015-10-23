@@ -20,12 +20,12 @@ class MessageLoggingController: UIViewController,UITableViewDataSource,UITableVi
         self.tableView.dataSource = self
         self.tableView.separatorStyle = UITableViewCellSeparatorStyle.None
         //加载消息记录
-        var f = Friend()
+        let f = Friend()
         f.icon = UIImagePNGRepresentation(UIImage(named: "icon_avatar")!)
         f.name = "张明楠"
         f.lastMessage = "hello"
         f.time = "下午3点12"
-        var ff = FriendFrame()
+        let ff = FriendFrame()
         ff.friend = f
 
         self.fridenList.append(ff)
@@ -40,7 +40,7 @@ class MessageLoggingController: UIViewController,UITableViewDataSource,UITableVi
         return fridenList.count
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var cell = FriendCell.cell(tableView)
+        let cell = FriendCell.cell(tableView)
         cell.friendFrame = self.fridenList[indexPath.row]
         return cell
     }

@@ -8,6 +8,9 @@
 
 import UIKit
 
-class Contacts: NSObject {
+class Contacts {
 
+    var icon:NSData?
+    var name:String?
+    
 }

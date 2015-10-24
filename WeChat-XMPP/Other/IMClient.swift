@@ -42,8 +42,8 @@ class IMClient:NSObject, XMPPStreamDelegate {
 
         self.stream = XMPPStream()
         self.stream?.addDelegate(self, delegateQueue: dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0))
-        self.stream?.hostName = "123.57.82.254"
-        let jid = XMPPJID.jidWithUser(MNAccount.shared.currentUserName, domain: "123.57.82.254", resource: "ios")
+        self.stream?.hostName = "133.57.82.254"
+        let jid = XMPPJID.jidWithUser(MNAccount.shared.currentUserName, domain: "133.57.82.254", resource: "ios")
         self.stream?.myJID = jid
 
         //修改登陆状态并且持久化

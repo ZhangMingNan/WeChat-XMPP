@@ -6,10 +6,17 @@
 技术选型:
 
 *XMPP通讯库  'XMPPFramework' 
+
 *HTTP网络库  'Alamofire' 
+
 *图片缓存  'Kingfisher' 
+
 *状态提示  'MBProgressHUD' 
+
 *JSON解析  'SwiftyJSON' 
+
 *下拉刷新  'MJRefresh' 
+
 *图片上传  'UpYunSDK' 
+
 *XPath解析  'hpple' 

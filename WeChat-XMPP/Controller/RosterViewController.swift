@@ -17,8 +17,6 @@ class RosterViewController: UITableViewController ,NSFetchedResultsControllerDel
         super.viewDidLoad()
  
         loadRoster()
-
-
         self.navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "contacts_add_friend")?.imageWithRenderingMode(UIImageRenderingMode.AlwaysOriginal), style: UIBarButtonItemStyle.Plain, target: self, action: "addFriend")
     }
     func addFriend(){

@@ -20,6 +20,8 @@ enum ConnectResponseType{
 }
 typealias LoginComplateBlock = (type:ConnectResponseType)->Void
 typealias DisconnectBlock = ()->Void
+
+let HostName = ""
 class IMClient:NSObject, XMPPStreamDelegate {
 
     var stream:XMPPStream?
@@ -42,8 +44,8 @@ class IMClient:NSObject, XMPPStreamDelegate {
 
         self.stream = XMPPStream()
         self.stream?.addDelegate(self, delegateQueue: dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0))
-        self.stream?.hostName = "133.57.82.254"
-        let jid = XMPPJID.jidWithUser(MNAccount.shared.currentUserName, domain: "133.57.82.254", resource: "ios")
+        self.stream?.hostName = HostName
+        let jid = XMPPJID.jidWithUser(MNAccount.shared.currentUserName, domain: HostName, resource: "ios")
         self.stream?.myJID = jid
 
         //修改登陆状态并且持久化

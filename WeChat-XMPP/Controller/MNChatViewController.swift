@@ -72,10 +72,13 @@ class MNChatViewController: UIViewController,NSFetchedResultsControllerDelegate 
 
     //点击附件选择器调用
     func click() {
+        //判断来源是否可用
+        if UIImagePickerController.isSourceTypeAvailable(.PhotoLibrary) {
         let imagepc = UIImagePickerController()
         imagepc.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         imagepc.delegate = self
         self.presentViewController(imagepc, animated: true, completion: nil)
+        }
     }
 
 
